@@ -1,0 +1,23 @@
+{
+  "name": "test-setup-2",
+  "version": "1.0.0",
+  "description": "ois-dashboard-test-setup-2",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Ryan Liu <ryan@launchlab.com.au> (https://www.launchlab.com.au)",
+  "license": "ISC",
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2"
+  }
+}
