@@ -5,11 +5,12 @@ const webpack = require('webpack')
 
 module.exports = {
   entry: {
-    main: './src/index.js',
+    main: ['babel-polyfill', './src/index.js']
   },
   output: {
-    filename: '[name].[hash].js',
-    path: path.resolve('./dist'),
+    filename: "[name].bundle.js",
+    chunkFilename: "[name].bundle.js",
+    path: path.resolve("./dist")
   },
   module: {
     rules: [
@@ -19,18 +20,20 @@ module.exports = {
       },
       {
         test: /\.js$/,
-        exclude: ['nodule_modules'],
-        use: [{
-          loader: 'babel-loader'
-        }],
-      },
-    ],
+        exclude: ["nodule_modules"],
+        use: [
+          {
+            loader: "babel-loader"
+          }
+        ]
+      }
+    ]
   },
   plugins: [
     new HtmlWebPackPlugin({
-      template: 'index.html'
+      template: "index.html"
     }),
-    new CleanWebPackPlugin(['dist']),
-    new webpack.ProgressPlugin(),
-  ],
-}
+    new CleanWebPackPlugin(["dist"]),
+    new webpack.ProgressPlugin()
+  ]
+};
