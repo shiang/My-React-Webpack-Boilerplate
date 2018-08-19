@@ -1,9 +1,8 @@
 import React from "react";
 import { Query } from "react-apollo";
 import { QUERY_DATA } from '../queries/index';
-//import "./App.scss";
-
-
+// import styled from 'styled-components';
+import "../styles/style.sass";
 
 class App extends React.Component {
   render() {
@@ -12,7 +11,9 @@ class App extends React.Component {
         if (loading) return <div>Loading...</div>;
         if (error) return <div>error...</div>
         console.log(data);
-        return <div>good</div>;
+        return <div>
+          good
+          </div>;
       }}
     </Query>;
   }
