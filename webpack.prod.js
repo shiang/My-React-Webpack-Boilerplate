@@ -23,9 +23,6 @@ module.exports = merge(common, {
           }
         ]
       },
-      {
-        sideEffects: []
-      }
     ]
   },
   optimization: {
