@@ -1,5 +1,5 @@
 import React from "react";
-import ReactDOM from "react-dom";
+// import ReactDOM from "react-dom";
 import App from "./components/App";
 // import { ApolloProvider } from "react-apollo";
 // import { ApolloClient } from "apollo-client";
@@ -46,10 +46,11 @@ const createClient = () => {
 };
 
 
-const renderApp = (Component) => {
+const renderApp = async (Component) => {
+  const { render } = await import(/* webpackChunkName: "render" */ 'react-dom');
   return import(/* webpackChunkName: "ApolloProvider" */ 'react-apollo').then(async ({ ApolloProvider }) => {
     const client = await createClient();
-    ReactDOM.render(
+    render(
       <ApolloProvider client={client}>
         <Component />
       </ApolloProvider>,

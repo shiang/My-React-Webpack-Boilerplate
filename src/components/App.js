@@ -1,8 +1,14 @@
 import React from "react";
 import { Query } from "react-apollo";
-import { QUERY_DATA } from '../queries/index';
-// import styled from 'styled-components';
+import { QUERY_DATA } from '../queries';
+import Loadable from "react-loadable";
+
 import "../styles/style.sass";
+
+const LoadableText = Loadable({
+  loader: () => import('./Title'),
+  loading: () => <div>loading...</div>
+});
 
 class App extends React.Component {
   render() {
@@ -13,6 +19,7 @@ class App extends React.Component {
         console.log(data);
         return <div>
           good
+          <LoadableText>HELLO</LoadableText>
           </div>;
       }}
     </Query>;
