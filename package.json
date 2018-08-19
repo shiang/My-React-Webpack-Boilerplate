@@ -1,7 +1,7 @@
 {
-  "name": "test-setup-2",
+  "name": "my-react-webpack-boilerplate",
   "version": "1.0.0",
-  "description": "ois-dashboard-test-setup-2",
+  "description": "This is created with libraries I often use in any React/GraphQL project with a collection of webpack configs I learned from the community.",
   "main": "index.js",
   "directories": {
     "test": "test"
@@ -11,7 +11,7 @@
     "start": "webpack-dev-server --config webpack.dev.js",
     "test": "test"
   },
-  "author": "Ryan Liu <ryan@launchlab.com.au> (https://www.launchlab.com.au)",
+  "author": "Ryan Liu <just.shiang@gmail.com> (https://shiang.codes)",
   "license": "ISC",
   "dependencies": {
     "apollo-cache-inmemory": "^1.2.7",
@@ -50,5 +50,17 @@
     "webpack-cli": "^3.1.0",
     "webpack-dev-server": "^3.1.5",
     "webpack-merge": "^4.1.4"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shiang/My-React-Webpack-Boilerplate.git"
+  },
+  "keywords": [
+    "react",
+    "webpack4"
+  ],
+  "bugs": {
+    "url": "https://github.com/shiang/My-React-Webpack-Boilerplate/issues"
+  },
+  "homepage": "https://github.com/shiang/My-React-Webpack-Boilerplate#readme"
 }
